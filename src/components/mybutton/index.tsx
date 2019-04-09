@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import { inject, observer } from 'mobx-react';
 
+import { Button } from 'antd';
 import './index.scss';
 
 import styles from './button.module.scss';
 
 @inject('store')
 @observer
-class Button extends React.Component<any> {
+class MyButton extends React.Component<any> {
   
   //
   // constructor (props){
@@ -24,12 +25,15 @@ class Button extends React.Component<any> {
         <button className={styles.error} onClick={store.addState.addNum1}>
           add1
         </button>
-        {/*<button className={styles.error} onClick={this.props.store.addState.addNum2}>*/}
-          {/*add2*/}
-        {/*</button>*/}
+        <button className={styles.error} onClick={store.addState.addNum2}>
+          add2
+        </button>
+        <Button type="primary">
+          antdButton
+        </Button>
       </div>
     );
   }
 }
 
-export default Button;
+export default MyButton;

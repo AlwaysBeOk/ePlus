@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.scss';
-import Button from './components/mybutton';
+import MyButton from './components/mybutton';
 import List from './components/list';
 
 class App extends React.Component {
@@ -21,7 +21,7 @@ class App extends React.Component {
           >
             Learn React
           </a>
-          <Button />
+          <MyButton />
           <List />
         </header>
       </div>
