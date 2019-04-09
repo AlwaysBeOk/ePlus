@@ -3,22 +3,13 @@ import { inject, observer } from 'mobx-react';
 
 import { Button } from 'antd';
 import './index.scss';
-
 import styles from './button.module.scss';
 
 @inject('store')
 @observer
 class MyButton extends React.Component<any> {
   
-  //
-  // constructor (props){
-  //   store: props.store.addStore;
-  // }
-  
-  
-  
   render() {
-    console.log(this.props);
     const { store } = this.props;
     return (
       <div>
@@ -28,9 +19,9 @@ class MyButton extends React.Component<any> {
         <button className={styles.error} onClick={store.addState.addNum2}>
           add2
         </button>
-        <Button type="primary">
-          antdButton
-        </Button>
+        {/*<Button type="primary">*/}
+          {/*antdButton*/}
+        {/*</Button>*/}
       </div>
     );
   }

@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import ListServer from '../../services/list.service';
-import { inject, observer } from 'mobx-react';
 
 const LS = new ListServer();
+
+import { inject, observer } from 'mobx-react';
 
 @inject('store')
 @observer
@@ -22,13 +23,13 @@ class List extends React.Component<any> {
   render() {
     return (
       <div>
-        <ul>
-          {this.state.list.map((item: {title: string, id: number}) => {
-            return <li key={item.id}>
-              {item.title}
-            </li>
-          })}
-        </ul>
+        {/*<ul>*/}
+          {/*{this.state.list.map((item: {title: string, id: number}) => {*/}
+            {/*return <li key={item.id}>*/}
+              {/*{item.title}*/}
+            {/*</li>*/}
+          {/*})}*/}
+        {/*</ul>*/}
         <div>{this.props.store.addState.total}</div>
       </div>
     );
